@@ -29,8 +29,10 @@ button:focus {
 
 .sidebar--header {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
+  gap: 15px;
+  padding: 10px 65px;
 }
 
 .sidebar--header > h3 {
@@ -68,6 +70,12 @@ button:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: background-color 0.2s ease;
+  padding-left: 65px;
+}
+
+.title:not(.selected-note):hover {
+  background-color: #21ba9b33;
 }
 
 .title--delete {

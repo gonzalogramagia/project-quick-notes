@@ -47,9 +47,12 @@ export default function App() {
 
     function deleteNote(e, noteId) {
       e.stopPropagation()
-      setNotes(oldNotes => {
-        return oldNotes.filter( oldNote => oldNote.id !== noteId);
-      });
+      const confirmDelete = window.confirm("Are you sure you want to delete this note?")
+      if (confirmDelete) {
+        setNotes(oldNotes => {
+          return oldNotes.filter( oldNote => oldNote.id !== noteId);
+        });
+      }
     }
   
     
